@@ -41,7 +41,12 @@ The Uniswap v3 interfaces are available for import into solidity smart contracts
 via the npm artifact `@uniswap/v3-core`, e.g.:
 
 ```solidity
-import '@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol';
+import import {
+  abi as factory_abi,
+  bytecode as factory_bytecode,
+} from '@uniswap/v3-core/artifacts/contracts/uniswapv3factory.sol/uniswapv3factory.json'
+
+// deploy the bytecode'@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol';
 
 contract MyContract {
   IUniswapV3Pool pool;
